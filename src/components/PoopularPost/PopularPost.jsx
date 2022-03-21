@@ -1,38 +1,7 @@
 import React from "react";
+import {arrayPopularPost} from "../../constant";
 
 const PopularPosts = () => {
-    const arrayPopularPost = [
-        {
-            id: 0,
-            imgUrl: "https://www.w3schools.com/w3images/workshop.jpg",
-            title: 'Lorem',
-            text: 'Sed mattis nunc',
-        },
-        {
-            id: 1,
-            imgUrl: "https://www.w3schools.com/w3images/gondol.jpg",
-            title: 'Ipsum',
-            text: 'Praes tinci sed',
-        },
-        {
-            id: 2,
-            imgUrl: "https://www.w3schools.com/w3images/skies.jpg",
-            title: 'Dorum',
-            text: 'Ultricies congue',
-        },
-        {
-            id: 3,
-            imgUrl: "https://www.w3schools.com/w3images/rock.jpg",
-            title: 'Mingsum',
-            text: 'Lorem ipsum dipsum',
-        },
-        {
-            id: 4,
-            imgUrl: "https://www.w3schools.com/w3images/rock.jpg",
-            title: 'Gaougio',
-            text: 'Lorem ipsum dipsum',
-        },
-    ]
     const PopularPost = arrayPopularPost.map(content =>
         <li key={content.id} className="w3-padding-16">
             <img src={content.imgUrl} alt="Image" className="w3-left w3-margin-right" style={{width: '50px'}} />

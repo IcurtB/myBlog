@@ -1,6 +1,6 @@
 import React from "react";
 import BlogEntry from "./BlogItem";
-
+import {posts} from '../../constant'
 
 
 const arrayForBlogEntry = [
@@ -33,18 +33,9 @@ const arrayForBlogEntry = [
     },
 ]
 const BlogEntries = () => {
-    let array = arrayForBlogEntry.map(content =>
-        <BlogEntry
-            key={content.id}
-            title={content.title}
-            titleDesc={content.titleDesc}
-            date={content.date}
-            countComments={content.countComments}
-            imageUrl={content.imageUrl}/>
-    )
     return (
         <div className="w3-col l8 s12">
-            {array}
+            <BlogEntry/>
         </div>
 
 
