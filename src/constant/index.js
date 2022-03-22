@@ -10,15 +10,6 @@ export const posts = [
         countComments:'0',
         imageUrl:"https://habrastorage.org/getpro/habr/upload_files/393/586/360/3935863609416855fa2234ecc2d38a2f.jpg",
     },
-    {
-        id: 1,
-        title: "Зачем архитектору Pet project?",
-        titleDesc: "Анализ и проектирование систем Управление проектами DIY или Сделай сам",
-        date: "14-02-2022",
-        desc:"Эта статья – о Pet project, собственных проектах, которыми многие из нас занимаются в свободное время.Поговорим о том, нужны ли такие увлечения архитектору и как Pet project может помочь в работе.Также я расскажу о своих проектах и опыте, который я с их помощью получил.Добро пожаловать под кат!",
-        countComments:'3',
-        imageUrl:"https://habrastorage.org/getpro/habr/upload_files/34d/fe3/296/34dfe3296f3906fa75f1921752e6e9d8.jpg",
-    },
 
 ]
 
@@ -29,12 +20,6 @@ export const arrayAboutMe = [
         name:'My Name',
         textarea:"Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you."
     },
-    {
-        id: 1,
-        imgUrl: "https://www.w3schools.com/w3images/avatar_g.jpg",
-        name: "Alice",
-        textarea: "Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you."
-    }
 ]
 
 export const arrayPopularPost = [
@@ -69,13 +54,6 @@ export const arrayPopularPost = [
         text: 'Lorem ipsum dipsum',
     },
 ]
-
-//     <p><span className="w3-tag w3-black w3-margin-bottom">Travel</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
-// <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
-// <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
-// <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
-// <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
-// </p>
 
 export const tags = [
     {
