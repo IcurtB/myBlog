@@ -6,9 +6,9 @@ const Tags = () => {
     const [tag, setTag] = useState('New York');
     const clickTag = () => {
         if (tag === 'New York'){
-            setTag === 'New York'
+            setTag('London')
         } else {
-            setTag('London');
+            setTag('New York');
         }
     }
     return (

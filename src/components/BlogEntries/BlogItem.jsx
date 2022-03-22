@@ -1,6 +1,7 @@
 import React from "react";
 import {posts} from "../../constant";
 
+
 const BlogEntry = (props) => {
     return (
        <div>
