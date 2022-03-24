@@ -1,0 +1,23 @@
+.main{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.main p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.container{
+    display: flex;
+}
+
+.container img {
+    width: 60px;
+    padding-right: 10px;
+}
+
+.container p{
+    font-size: 14px!important;
+}

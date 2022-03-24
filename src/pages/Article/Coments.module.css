@@ -1,0 +1,44 @@
+.comments h4{
+    font-weight: 900;
+}
+.comments p{
+    font-size: 16px;
+}
+
+.comments h6{
+    display: flex;
+    justify-content: end;
+    text-decoration: underline;
+}
+
+.container{
+    display: flex;
+}
+
+.container img {
+    width: 60px;
+    padding-right: 10px;
+}
+
+.container p{
+    font-size: 14px!important;
+}
+
+.container input{
+    width: 550px;
+    border-radius: 15px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+.container1{
+    width: 200px!important;
+}
+
+.container button{
+    width: 200px;
+    border: 1px solid rgb(47, 47, 163);
+    border-radius: 15px;
+    padding-left: 10px;
+    background-color: rgb(97, 97, 252);
+    color: white;
+}
