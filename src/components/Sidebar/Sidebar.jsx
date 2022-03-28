@@ -2,6 +2,7 @@ import React from "react";
 import AboutMe from "../AboutMe/AboutMe";
 import PopularPost from "../PoopularPost/PopularPost";
 import Tags from "../Tags/Tags";
+import IncDec from "../testComponent/Test";
 
 const SideBar = () => {
 
@@ -10,6 +11,7 @@ const SideBar = () => {
             <AboutMe/>
             <PopularPost/>
             <Tags/>
+            <IncDec/>
         </div>
     )
 }

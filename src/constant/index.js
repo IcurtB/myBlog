@@ -41,7 +41,15 @@ export const posts = [
             'Научно-популярное',
             'Физика',
             'Астрономия',
+            'Фантастика',
+            "исторический",
         ],
+        user:{
+            id: 1,
+            name: "OlegSivchenko",
+            picture: 'https://habrastorage.org/r/w32/getpro/habr/avatars/27b/f35/f6f/27bf35f6f595fc136b70c384752ba387.jpg',
+            pTime: "18 марта в 03:33",
+        },
     },
     {
         id: 1,
@@ -58,6 +66,12 @@ export const posts = [
             'Node.JS ',
             'Serverless ',
         ],
+        user:{
+            id: 1,
+            name: "ak0oval",
+            picture: 'https://habr.com/ru/users/ak0oval/',
+            pTime: " 17 марта в 17:48",
+        },
     },
 
 

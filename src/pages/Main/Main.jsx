@@ -13,6 +13,7 @@ const Main = () => {
                     <div className="w3-row">
                         <BlogEntries/>
                         <SideBar/>
+
                     </div>
 
                     <Footer/>

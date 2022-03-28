@@ -1,0 +1,23 @@
+.df{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.df div{
+    border: 1px solid black;
+    font-size: 16px;
+}
+.wdf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.count{
+    width: 186px;
+    height: 28px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
