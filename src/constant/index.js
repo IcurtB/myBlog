@@ -1,5 +1,4 @@
-import React from "react";
-
+export const BASE_URL = 'http://localhost:3000';
 
 export const posts = [
     {
@@ -77,7 +76,7 @@ export const posts = [
 
 
 
-]
+];
 
 export const arrayAboutMe = [
     {
@@ -86,7 +85,7 @@ export const arrayAboutMe = [
         name:'My Name',
         textarea:"Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you."
     },
-]
+];
 
 export const arrayPopularPost = [
     {
@@ -119,7 +118,7 @@ export const arrayPopularPost = [
         title: 'Gaougio',
         text: 'Lorem ipsum dipsum',
     },
-]
+];
 
 export const tags = [
     {
@@ -172,8 +171,7 @@ export const tags = [
         id: 13,
         name: "Shopping",
     },
-]
-
+];
 
 export const comments = [
     {
@@ -194,4 +192,4 @@ export const comments = [
         name: 'Meerim Egemberdieva,  6 месяца назад',
         comment: 'Ну и интересное замечание -- thermal runaway и core-collapse это процессы, отличающиеся друг от друга, а главное происходящие с совершенно разными объектами (крохотный БК массой 1.44Msun vs ядро в несколько масс (иногда десятков масс) Солнца в сверхмассивной звезде), но их наблюдаемые характеристики достаточно схожи, чтобы изначально поместить их в одну категорию "сверхновые" и только спустя некоторое время понять, что Ia (и подтипы) отличаются от всех остальных сверхновых.'
     }
-]
+];

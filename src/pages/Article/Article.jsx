@@ -1,33 +1,46 @@
-import {useParams} from 'react-router-dom'
-import React from 'react';
-
+import React, {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
 import styles from './Article.module.css';
 import Comments from './Coments';
-import { posts } from '../../constant/';
+import {BASE_URL} from '../../constant/';
 
 
-const Article = () => {
+const Article = (props) => {
     const params = useParams();
     const postId = parseInt(params.id);
-    const postData = posts.find((item) => {
-        return item.id === postId;
-    })
+    const [posts, setPosts] = useState({});
+
+
+    useEffect(() => {
+        const url = BASE_URL + '/posts/' + postId;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => setPosts(data))
+    //    ПРОЧИТАЙ ЗАВИСИМОСТИ USEEFFECTS
+    },[])
+    // const postData = posts.find((item) => {
+    //     return item.id === postId;
+    // })
+
     return (
         <div className={styles.main}>
+            {/*{console.log(posts)}*/}
+          {/*  <div className={styles.container}>*/}
+          {/*      <img src={posts.user.picture} alt=""/>*/}
+          {/*      <p>{posts.user.name} {posts.user.pTime}</p> <br/>*/}
+          {/*  </div>*/}
+            <h1>{posts.title}</h1>
+            {/*{console.log(posts.tags)}*/}
             <div className={styles.container}>
-                <img src={postData.user.picture}
-                    alt=""/>
-                <p>{postData.user.name} {postData.user.pTime}</p> <br/>
+                {/*{console.log(typeof (posts.tags))}*/}
+            {/*    {posts.tags.map((item, index) =>*/}
+            {/*     <p key={index}>{`${item}|`}</p>)}*/}
             </div>
-            <h1>{postData.title}</h1>
-            <div className={styles.container}>
-                {postData.tags.map((item, index) =>
-                    <p key={index}>{`${item}|`}</p>)}
-            </div>
-            <img src={postData.imageUrl} alt=""/> <br/>
-            <p>{postData.desc}</p>
+            <img src={posts.imageUrl} alt=""/> <br/>
+            <p>{posts.desc}</p>
           <br/> <br/>
-            <Comments/>
+            <Comments postId={postId} />
         </div>
     );
 };
