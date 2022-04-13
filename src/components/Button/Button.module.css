@@ -1,0 +1,21 @@
+.btn {
+    border-radius: 40px;
+    border: 0;
+    padding: 12px 55px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 147.19%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainBtn{
+    background-color: #FF583E;
+}
+.secondaryBtn{
+
+    background-color: #254F4C;
+}

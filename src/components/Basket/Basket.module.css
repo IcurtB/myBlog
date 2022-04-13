@@ -1,0 +1,6 @@
+.table>tbody>tr>td{
+    width: 55px;
+    height: 35px;
+    border: 1px solid black;
+    text-align: center;
+}

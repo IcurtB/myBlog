@@ -1,13 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Article.module.css'
-import {BASE_URL, comments} from '../../constant';
+import {BASE_URL} from '../../constant';
 import {toast} from "react-hot-toast";
 import {useParams} from "react-router-dom";
+import {getCurrentDate} from "../../helpers";
+
 
 const Comments = (props) => {
-    const params = useParams()
-    const [name, setName] = useState('')
-    const [comment, setComment] = useState('')
+    const params = useParams();
+    const [name, setName] = useState('');
+    const [comment, setComment] = useState('');
+    const [comments, setComments] = useState([])
+    getCurrentDate();
     const getName = (event) => {
         setName(event.currentTarget.value)
     };
@@ -15,15 +19,26 @@ const Comments = (props) => {
         setComment(event.currentTarget.value)
     };
     const url = BASE_URL + '/comments';
+    const getCommentsByPostId = () => {
+        const url = BASE_URL + '/comments?postId=' + props.postId;
+        fetch(url)
+            .then(response => {
+                if(response.status === 200){
+                    return response.json();
+                } else {
+                    toast.error('УПС, НЕ РАБОТАЕТ!!!!')
+                }
+            })
+            .then(data => setComments(data))
+    };
     const addComment = () => {
-        const now = new Date()
+
         const obj = {
             author:name,
             comment:comment,
             postId:props.postId,
-            date: now.toLocaleDateString()
+            date: getCurrentDate()
         }
-
 
         const options = {
             method: "POST",
@@ -35,20 +50,19 @@ const Comments = (props) => {
         fetch(url, options)
             .then(response => {
                 if(response.status === 201){
-                    return response.json()
+                   toast.success('Ваш комент добавлен!');
+                    getCommentsByPostId();
             } else {
                     toast.error('Что то пошло не так. Попробуйте заново!')
                 }
             })
-    }
 
-    const [comm, setComm] = useState([]);
-
+    };
     useEffect(() => {
-        fetch(url)
-            .then((response) => response.json())
-            .then(date => setComm(date))
-    }, [])
+        console.log('worked')
+        getCommentsByPostId()
+    }, []);
+
 
     return (
         <div className={styles.comments}>
@@ -61,15 +75,13 @@ const Comments = (props) => {
             </div><br /> <br />
             <h5>122 комментариев  </h5>
             {
-                comm.map((item) => {
+                comments.map((item) => {
                     return <div key={item.id}>
                         <div className={styles.container}>
-                            <img src={item.img} alt="" />
-                            <p>{item.author}</p>
-                            <p>{item.date}</p><br />
+                            <p>{item.author}</p><br/>
+                            <p>{item.date}</p>
                         </div>
                         <p>{item.comment}</p>
-                        <h6>Ответить</h6>
                     </div>
                 })
             }

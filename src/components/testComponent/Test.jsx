@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import s from './Test.module.css';
 import {toast} from "react-hot-toast";
 import {BASE_URL} from "../../constant";
-
+import Button from "../Button/Button";
+import arrIcon from "../../media/icons/arr.svg"
 const IncDec = () => {
     let [count, setCount] = useState(0);
     const [data, setData] = useState([])
@@ -39,9 +40,7 @@ const IncDec = () => {
                 "Content-Type":"application/json"
             },
             body: JSON.stringify(user)
-
         }
-
         fetch(url, options)
             .then((response) => response.json())
             .then((data) => console.log(data))
@@ -91,7 +90,9 @@ const IncDec = () => {
                     <button onClick={addUsers}>Добавить пользователей</button>
                     <button onClick={updateUser}>Изменить пользователя</button>
                     <button onClick={deleteUser}>Удалить пользователя</button>
-
+                    <Button myclass="mainBtn" handleClick={getUsers}>В корзину</Button>
+                    <Button myclass="secondaryBtn" handleClick={getData}>В корзину</Button>
+                    <Button myclass="mainBtn" handleClick={getUsers} >В корзину <img src={arrIcon} alt=""/></Button>
                 </div>
 
             </div>
